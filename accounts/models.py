@@ -41,11 +41,11 @@ class UserManager(BaseUserManager):
 
 
 class User(AbstractBaseUser):
-    RESTAURANT=1
-    CUSTOMER=2
+    VENDOR = 1
+    CUSTOMER = 2
 
     ROLE_CHOICE = (
-        (RESTAURANT,'Restaurent'),
+        (VENDOR,'Vendor'),
         (CUSTOMER, 'Customer'),
     )
     first_name = models.CharField(max_length=50)
@@ -95,6 +95,7 @@ class UserProfile(models.Model):
     longitude = models.CharField(max_length=20, blank=True,null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     modified_at = models.DateTimeField(auto_now=True)
+
 
     #String representation of the above model
     def __str__(self):
