@@ -126,7 +126,6 @@ def logout(request):
     return redirect('login')
 
 @login_required(login_url='login')
-
 def myAccount(request):
     user = request.user
     redirectUrl = detectUser(user)
@@ -139,6 +138,5 @@ def custdashboard(request):
 
 @login_required(login_url='login')
 @user_passes_test(check_role_vendor)
-
 def vendordashboard(request):
     return render(request, 'accounts/vendordashboard.html')
