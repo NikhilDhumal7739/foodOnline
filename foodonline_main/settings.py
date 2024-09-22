@@ -72,6 +72,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'accounts.context_processors.get_vendor',
             ],
         },
     },
@@ -155,5 +156,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 from django.contrib.messages import constants as messages
 
 MESSAGE_TAGS = {
-    messages.ERROR: "DANGER",
+    messages.ERROR: 'danger',
 }
+
+#email configuration
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'nikhilfoodonline@gmail.com'
+EMAIL_HOST_PASSWORD = 'rflxidsmitflqzua'
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'foodOnline <nikhilfoodonline@gmail.com>'

@@ -1,0 +1,11 @@
+{% autoescape off %}    <!--autoescape means we trust the values from where they are coming -->
+
+Hi {{user.first_name}},
+
+{% if is_approved %}
+Congrats , your restaurant registration has been approved!
+{% else %}
+Sorry, your restaurant registration has not been approved.For more details, please contact support@foodonline.com
+{% endif %}
+
+{% endautoescape %}
