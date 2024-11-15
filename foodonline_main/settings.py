@@ -73,6 +73,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'accounts.context_processors.get_vendor',
+                'accounts.context_processors.get_google_api',
             ],
         },
     },
@@ -167,3 +168,5 @@ EMAIL_HOST_USER = 'nikhilfoodonline@gmail.com'
 EMAIL_HOST_PASSWORD = 'rflxidsmitflqzua'
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'foodOnline <nikhilfoodonline@gmail.com>'
+
+GOOGLE_API_KEY = 'AIzaSyC4yTudrg9pTcB2khAgrbCMBfVvbviOhVU'
